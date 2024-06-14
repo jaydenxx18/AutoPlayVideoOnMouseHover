@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Video Play</title>
+</head>
+
+<body>
+    <div>
+        <video src="abc.mp4" type="video/mp4" loop class="clip" muted="true"></video>
+    </div>
+
+
+    <script>
+        const clip = document.querySelector('.clip');
+        clip.addEventListener('mouseenter', function () {
+            clip.play();
+            document.getElementsByClassName('clip').innerHTML = mute = 'false'
+        });
+        clip.addEventListener('mouseout', function () {
+            clip.pause();
+        });
+    </script>
+
+</body>
+
+</html>
